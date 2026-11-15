@@ -17,9 +17,9 @@ export default function Header() {
     <header
       className="flex items-center justify-between px-6 py-4 border-b"
       style={{
-        backgroundColor: 'rgba(255,255,255,0.72)',
-        borderColor: 'rgba(23,35,33,0.1)',
-        boxShadow: '0 2px 16px rgba(23,35,33,0.05)',
+        backgroundColor: '#ffffff',
+        borderColor: 'rgba(229,62,62,0.12)',
+        boxShadow: '0 2px 12px rgba(229,62,62,0.06)',
       }}
     >
       <div>
@@ -34,17 +34,17 @@ export default function Header() {
         <button
           className="relative w-9 h-9 flex items-center justify-center rounded-xl border transition-all duration-200"
           style={{
-            backgroundColor: '#edf7f4',
-            borderColor: 'rgba(15,118,110,0.18)',
-            color: 'rgba(23,35,33,0.55)',
+            backgroundColor: '#fff8f8',
+            borderColor: 'rgba(229,62,62,0.15)',
+            color: 'rgba(17,17,17,0.5)',
           }}
           onMouseEnter={(e) => {
-            e.currentTarget.style.backgroundColor = '#dcefe9';
-            e.currentTarget.style.color = '#0f766e';
+            e.currentTarget.style.backgroundColor = '#ffe0e0';
+            e.currentTarget.style.color = '#e53e3e';
           }}
           onMouseLeave={(e) => {
-            e.currentTarget.style.backgroundColor = '#edf7f4';
-            e.currentTarget.style.color = 'rgba(23,35,33,0.55)';
+            e.currentTarget.style.backgroundColor = '#fff8f8';
+            e.currentTarget.style.color = 'rgba(17,17,17,0.5)';
           }}
         >
           <Bell size={16} />
@@ -58,15 +58,15 @@ export default function Header() {
         <div
           className="flex items-center gap-2.5 px-3 py-1.5 rounded-xl border transition-all duration-200 cursor-pointer"
           style={{
-            backgroundColor: '#edf7f4',
-            borderColor: 'rgba(15,118,110,0.18)',
+            backgroundColor: '#fff8f8',
+            borderColor: 'rgba(229,62,62,0.15)',
           }}
-          onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = '#dcefe9')}
-          onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = '#edf7f4')}
+          onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = '#ffe0e0')}
+          onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = '#fff8f8')}
         >
           <div
             className="w-7 h-7 rounded-lg flex items-center justify-center text-white text-xs font-bold"
-            style={{ background: 'linear-gradient(135deg, #0f766e 0%, #ef8354 100%)' }}
+            style={{ background: 'linear-gradient(135deg, #e53e3e 0%, #f97316 100%)' }}
           >
             A
           </div>

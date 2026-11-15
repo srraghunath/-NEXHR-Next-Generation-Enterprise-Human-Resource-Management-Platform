@@ -1,18 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  --color-bg: #f4f7f5;
-  --color-surface: #eef3f0;
-  --color-text: #172321;
-  --color-primary: #0f766e;
-  --color-primary-dark: #115e59;
-  --color-accent: #ef8354;
-  --color-info: #3568a8;
-  --color-warning: #c58b32;
+  --color-bg: #ffffff;
+  --color-surface: #fafafa;
+  --color-text: #111111;
+  --color-primary: #e53e3e;
+  --color-primary-dark: #c53030;
+  --color-accent: #f97316;
+  --color-info: #2563eb;
+  --color-warning: #f59e0b;
 }
 
 @layer base {
@@ -25,17 +25,10 @@
   }
 
   body {
-    font-family: 'DM Sans', system-ui, sans-serif;
+    font-family: 'Inter', system-ui, sans-serif;
     background-color: var(--color-bg);
-    background-image: linear-gradient(rgba(15, 118, 110, 0.035) 1px, transparent 1px), linear-gradient(90deg, rgba(15, 118, 110, 0.035) 1px, transparent 1px);
-    background-size: 32px 32px;
     color: var(--color-text);
     min-height: 100vh;
-  }
-
-  h1, h2, h3, .page-title, .section-title {
-    font-family: 'Space Grotesk', 'DM Sans', sans-serif;
-    letter-spacing: -0.02em;
   }
 
   ::-webkit-scrollbar {
@@ -277,82 +270,4 @@
 @keyframes scaleIn {
   0% { transform: scale(0.95); opacity: 0; }
   100% { transform: scale(1); opacity: 1; }
-}
-
-/* Visual refresh: keep the existing component contracts and interactions intact. */
-@layer components {
-  .glass-card {
-    background: rgba(255, 255, 255, 0.88);
-    border-color: rgba(23, 35, 33, 0.1);
-    border-radius: 1.25rem;
-    box-shadow: 0 12px 30px rgba(23, 35, 33, 0.07), 0 1px 3px rgba(23, 35, 33, 0.04);
-    backdrop-filter: blur(12px);
-  }
-
-  .btn-primary {
-    background: linear-gradient(135deg, #0f766e 0%, #115e59 100%);
-    box-shadow: 0 7px 18px rgba(15, 118, 110, 0.28);
-  }
-
-  .btn-primary:hover:not(:disabled) {
-    background: linear-gradient(135deg, #ef8354 0%, #0f766e 100%);
-    box-shadow: 0 8px 22px rgba(239, 131, 84, 0.32);
-  }
-
-  .btn-secondary {
-    background-color: #edf7f4;
-    border-color: rgba(15, 118, 110, 0.2);
-    color: #0f766e;
-  }
-
-  .btn-secondary:hover {
-    background-color: #dcefe9;
-    border-color: rgba(15, 118, 110, 0.4);
-  }
-
-  .btn-danger {
-    background-color: rgba(239, 131, 84, 0.1);
-    border-color: rgba(239, 131, 84, 0.28);
-    color: #b95836;
-  }
-
-  .btn-danger:hover {
-    background-color: rgba(239, 131, 84, 0.2);
-    border-color: rgba(239, 131, 84, 0.4);
-    color: #99452b;
-  }
-
-  .input-field {
-    background-color: rgba(238, 243, 240, 0.82);
-    border-color: rgba(23, 35, 33, 0.14);
-  }
-
-  .input-field:hover,
-  .input-field:focus {
-    border-color: #0f766e;
-  }
-
-  .input-field:focus {
-    box-shadow: 0 0 0 3px rgba(15, 118, 110, 0.12);
-  }
-
-  .sidebar-item:hover {
-    color: #0f766e;
-    background-color: rgba(15, 118, 110, 0.08);
-  }
-
-  .sidebar-item-active {
-    background: linear-gradient(135deg, rgba(15, 118, 110, 0.13) 0%, rgba(239, 131, 84, 0.1) 100%);
-    color: #0f766e;
-    border-color: rgba(15, 118, 110, 0.22);
-    box-shadow: 0 4px 12px rgba(15, 118, 110, 0.12);
-  }
-
-  .table-row {
-    border-bottom-color: rgba(23, 35, 33, 0.08);
-  }
-
-  .table-row:hover {
-    background-color: rgba(15, 118, 110, 0.045);
-  }
 }

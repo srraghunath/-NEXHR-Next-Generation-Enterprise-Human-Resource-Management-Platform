@@ -26,21 +26,21 @@ export default function Sidebar({ collapsed, onToggle }) {
         border-r`}
       style={{
         minHeight: '100vh',
-        backgroundColor: 'rgba(255,255,255,0.82)',
-        borderColor: 'rgba(23,35,33,0.1)',
-        boxShadow: '2px 0 20px rgba(23,35,33,0.06)',
+        backgroundColor: '#ffffff',
+        borderColor: 'rgba(229,62,62,0.12)',
+        boxShadow: '2px 0 16px rgba(229,62,62,0.06)',
       }}
     >
       {/* Logo */}
       <div
         className={`flex items-center gap-3 px-4 py-5 border-b ${collapsed ? 'justify-center' : ''}`}
-        style={{ borderColor: 'rgba(23,35,33,0.1)' }}
+        style={{ borderColor: 'rgba(229,62,62,0.12)' }}
       >
         <div
           className="w-9 h-9 rounded-xl flex items-center justify-center flex-shrink-0"
           style={{
-            background: 'linear-gradient(135deg, #0f766e 0%, #ef8354 100%)',
-            boxShadow: '0 6px 16px rgba(15,118,110,0.28)',
+            background: 'linear-gradient(135deg, #e53e3e 0%, #f97316 100%)',
+            boxShadow: '0 6px 16px rgba(229,62,62,0.35)',
           }}
         >
           <Briefcase size={18} className="text-white" />
@@ -74,18 +74,18 @@ export default function Sidebar({ collapsed, onToggle }) {
       </nav>
 
       {/* Toggle button */}
-      <div className="p-3 border-t" style={{ borderColor: 'rgba(23,35,33,0.1)' }}>
+      <div className="p-3 border-t" style={{ borderColor: 'rgba(229,62,62,0.12)' }}>
         <button
           onClick={onToggle}
           className="w-full flex items-center justify-center p-2 rounded-xl transition-all duration-200"
           style={{ color: 'rgba(17,17,17,0.4)' }}
           onMouseEnter={(e) => {
-            e.currentTarget.style.backgroundColor = 'rgba(15,118,110,0.08)';
-            e.currentTarget.style.color = '#0f766e';
+            e.currentTarget.style.backgroundColor = 'rgba(229,62,62,0.06)';
+            e.currentTarget.style.color = '#e53e3e';
           }}
           onMouseLeave={(e) => {
             e.currentTarget.style.backgroundColor = 'transparent';
-            e.currentTarget.style.color = 'rgba(23,35,33,0.45)';
+            e.currentTarget.style.color = 'rgba(17,17,17,0.4)';
           }}
           title={collapsed ? 'Expand sidebar' : 'Collapse sidebar'}
         >
