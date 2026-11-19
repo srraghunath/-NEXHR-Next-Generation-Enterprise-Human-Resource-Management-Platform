@@ -1,0 +1,23 @@
+services:
+  - type: web
+    name: nexhr-api
+    runtime: docker
+    dockerfilePath: ./employee-management-system-backend/Dockerfile
+    dockerContext: ./employee-management-system-backend
+    envVars:
+      - key: SPRING_PROFILES_ACTIVE
+        value: render
+      - key: PORT
+        value: 8080
+
+  - type: web
+    name: nexhr
+    runtime: docker
+    dockerfilePath: ./employee-management-system-frontend/Dockerfile
+    dockerContext: ./employee-management-system-frontend
+    envVars:
+      - key: BACKEND_URL
+        fromService:
+          type: web
+          name: nexhr-api
+          envVarKey: RENDER_EXTERNAL_URL

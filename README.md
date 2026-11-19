@@ -356,6 +356,54 @@ http://localhost:5173
 
 If both URLs open successfully, the project has been configured correctly.
 
+## Docker Deployment
+
+Docker Compose is the quickest way to deploy the complete application.
+
+### Prerequisites
+
+- Docker Desktop or Docker Engine
+- Docker Compose
+
+### Deploy
+
+From the repository root:
+
+```bash
+cp .env.example .env
+docker compose up --build -d
+```
+
+Change the passwords in `.env` before starting the stack. Open:
+
+```text
+http://localhost:8080
+```
+
+The Compose stack starts MySQL 8.4, the Spring Boot API, and the Vite/React UI behind nginx. API requests are proxied through `/api`, so the frontend and backend are accessible from one URL.
+
+Useful commands:
+
+```bash
+docker compose ps
+docker compose logs -f
+docker compose down
+docker compose down -v
+```
+
+Use `docker compose down -v` only when you want to delete the persistent MySQL data.
+
+## Render Deployment
+
+The repository includes `render.yaml` for deploying the frontend and backend as separate Render web services.
+
+1. Push this repository to GitHub.
+2. In Render, open **New > Blueprint**.
+3. Select this GitHub repository and apply `render.yaml`.
+4. Render provides public HTTPS URLs for both services. The frontend URL is the application URL.
+
+The Render backend uses an in-memory H2 database for an immediately runnable demo. Demo data is seeded at startup and changes are reset when the backend restarts. Configure MySQL environment variables and remove `SPRING_PROFILES_ACTIVE=render` to use persistent MySQL instead.
+
 ## REST API Overview
 
 The backend exposes RESTful APIs for managing employees, departments, projects, and performance reviews.
