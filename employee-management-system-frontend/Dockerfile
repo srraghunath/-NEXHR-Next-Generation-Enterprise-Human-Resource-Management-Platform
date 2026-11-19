@@ -1,4 +1,6 @@
 FROM node:24-alpine AS build
+ARG VITE_API_BASE_URL=https://nexhr-next-generation-enterprise-human.onrender.com
+ENV VITE_API_BASE_URL=$VITE_API_BASE_URL
 WORKDIR /app
 COPY package.json package-lock.json* ./
 RUN npm ci
